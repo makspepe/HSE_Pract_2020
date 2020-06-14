@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Задача_12
 {
@@ -92,13 +93,21 @@ namespace Задача_12
         {
             ulong movings = 0;
             ulong comparisons = 0;
-            Console.Write("Массив: ");
+            Console.Write("Массив");
             Print(arr);
-            Console.Write("Отсортированный массив: ");
+            Stopwatch Time = new Stopwatch();
+            Time.Start();
             arr = QuickSort(arr, 0, arr.Length - 1, ref movings, ref comparisons);
-            Print(arr);
+            Time.Stop();
+            Console.WriteLine();
+            Console.WriteLine("Время: " + Time.Elapsed.Ticks);
+            Console.WriteLine();
             Console.WriteLine("Перемещений: " + movings);
             Console.WriteLine("Сравнений: " + comparisons);
+            Console.WriteLine("Отсортированный массив");
+            Print(arr);
+            Console.WriteLine("----------------------------------------------------");
+
         }
 
         //Поразрядная сортировка - Radix sort - очень интересный по задумке и реализации алгоритм. 
@@ -141,12 +150,19 @@ namespace Задача_12
             ulong movings = 0;
             ulong comparisons = 0;
             Console.Write("Массив: ");
-           Print(arr);
-            Console.Write("Отсортированный массив: ");
-            arr = RadSort(arr, ref movings, ref comparisons);
             Print(arr);
+            Stopwatch Time = new Stopwatch();
+            Time.Start();
+            arr = RadSort(arr, ref movings, ref comparisons);
+            Time.Stop();
+            Console.WriteLine();
+            Console.WriteLine("Время: " + Time.Elapsed.Ticks);
+            Console.WriteLine();
             Console.WriteLine("Перемещений: " + movings);
             Console.WriteLine("Сравнений: " + comparisons);
+            Console.WriteLine("Отсортированный массив");
+            Print(arr);
+            Console.WriteLine("----------------------------------------------------");
         }
 
         public static void Main(string[] args)

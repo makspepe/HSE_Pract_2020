@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Задача_9
 {
-    class CircularList  //циклич. лист
+    class CircList  //циклич. лист
     {
-        public CircularListEntry First { get; set; } 
+        public CircListBeg First { get; set; } 
 
         public int Count   //
         {
@@ -14,7 +14,7 @@ namespace Задача_9
                 int count = 0;
                 if (First != null)
                 {
-                    CircularListEntry entry = First.Next;
+                    CircListBeg entry = First.Next;
                     count++;
                     while (entry.Key != First.Key)
                     {
@@ -25,44 +25,44 @@ namespace Задача_9
                 return count;
             }
         }
-        public CircularList()  //без парам.
+        public CircList()  //без парам.
         {
             First = null;
         }
-        public CircularList(CircularListEntry first) //с парам.
+        public CircList(CircListBeg first) //с парам.
         {
             First = first;
         }
-        public CircularList(ICollection<CircularListEntry> col) //
+        public CircList(ICollection<CircListBeg> col) //
         {
-            CircularListEntry help = new CircularListEntry();
+            CircListBeg help = new CircListBeg();
             First = help;
-            foreach (CircularListEntry entry in col)
+            foreach (CircListBeg entry in col)
             {
                 help.Value = entry.Value;
                 help.Key = entry.Key;
-                help.Next = new CircularListEntry();
+                help.Next = new CircListBeg();
                 help = help.Next;
             }
                       //help = First;
         }
-        public CircularListEntry SearchKey(int key)
+        public CircListBeg SearchKey(int key)
         {
-            CircularListEntry help = First;
+            CircListBeg help = First;
             if (key == help.Key) return help;
             help = help.Next;
             while (help.Key != First.Key) if (key == help.Key) return help;
                 else help = help.Next;
             return null;
         }
-        public void Remove(CircularListEntry entry)
+        public void Remove(CircListBeg entry)
         {
             if (First != null)
             {
-                CircularListEntry help = First;
+                CircListBeg help = First;
                 if (help.Value != entry.Value)
                 {
-                    CircularListEntry last = help;
+                    CircListBeg last = help;
                     help = help.Next;
                     while (help.Key != First.Key)
                     {
@@ -96,11 +96,11 @@ namespace Задача_9
                 }
             }
         }
-        public void Add(CircularListEntry entry)
+        public void Add(CircListBeg entry)
         {
             if (First != null)
             {
-                CircularListEntry help = this.SearchKey(Count - 1);
+                CircListBeg help = this.SearchKey(Count - 1);
                 help.Next = entry;
                 entry.Next = First;
                 entry.Key = help.Key + 1;
@@ -117,7 +117,7 @@ namespace Задача_9
             if (First != null)
             {
                 string ans = "";
-                CircularListEntry help = First;
+                CircListBeg help = First;
                 ans += First.ToString() + " ";
                 help = help.Next;
                 while (help.Key != First.Key)
@@ -134,18 +134,18 @@ namespace Задача_9
             Console.WriteLine(ToString());
         }
     }
-    class CircularListEntry //
+    class CircListBeg //
     {
         public int Value { get; set; }
         public int Key { get; set; } //является индексатором
-        public CircularListEntry Next { get; set; }
-        public CircularListEntry()
+        public CircListBeg Next { get; set; }
+        public CircListBeg()
         {
             Key = 0;
             Value = 0;
             Next = null;
         }
-        public CircularListEntry(int value)
+        public CircListBeg(int value)
         {
             Value = value;
             Next = null;
@@ -192,14 +192,14 @@ namespace Задача_9
 
         static void Main(string[] args)
         {
-            CircularList list = new CircularList();
+            CircList list = new CircList();
             int N = ImpIntNumber("Введите число, до которого последует заполние списка: ");
             
             for (int i = 0; i < N; i++)
-                list.Add(new CircularListEntry(i + 1));
+                list.Add(new CircListBeg(i + 1));
             //---------------------VV TODO --------------------
             Console.WriteLine("Полученный список:\n" + list.ToString() + "\n\nУдаление члена из списка\n\nПолученный список: ");
-            list.Remove(new CircularListEntry(list.Count));
+            list.Remove(new CircListBeg(list.Count));
             list.Show();
             Console.WriteLine("Поиск 4 элемента: ");
             if (list.SearchKey(3) == null) Console.WriteLine("Такого элемента нет в списке");
