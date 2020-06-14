@@ -1,0 +1,7 @@
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_2\bin\Debug\Задача_2.exe.config
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_2\bin\Debug\Задача_2.exe
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_2\bin\Debug\Задача_2.pdb
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_2\obj\Debug\Задача_2.csprojAssemblyReference.cache
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_2\obj\Debug\Задача_2.csproj.CoreCompileInputs.cache
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_2\obj\Debug\Задача_2.exe
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_2\obj\Debug\Задача_2.pdb
