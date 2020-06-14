@@ -42,7 +42,7 @@ namespace Задача_11
                         Console.WriteLine($"Ошибка - введите целое положительное число");
                         ok = false;
                     }
-                    ok = true;
+                    else ok = true;
                 }
                 catch (FormatException)
                 {
@@ -110,6 +110,7 @@ namespace Задача_11
             s = Decryption(s, numbers);
             Console.WriteLine("Дешифровка:");
             Console.WriteLine(s);
+            Console.ReadLine();
         }
     }
 }

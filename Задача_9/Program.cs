@@ -174,12 +174,12 @@ namespace Задача_9
                 {
                     string tmp1 = Console.ReadLine();
                     number = Convert.ToInt32(tmp1);
-                    if(number < 1)
+                    if (number < 1)
                     {
                         Console.WriteLine($"Ошибка - введите положительное целое число");
                         ok = false;
                     }
-                    ok = true;
+                    else ok = true;
                 }
                 catch (FormatException)
                 {

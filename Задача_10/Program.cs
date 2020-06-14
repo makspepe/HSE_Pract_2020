@@ -187,6 +187,7 @@ namespace Задача_10
                 graph.contract(value);
                 graph.writeGraph(path);
             }
+            else Console.WriteLine("Граф пуст");
             Console.ReadLine();
         }
     }

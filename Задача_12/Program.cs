@@ -21,12 +21,13 @@ namespace Задача_12
                 {
                     string tmp1 = Console.ReadLine();
                     number = Convert.ToInt32(tmp1);
+                    
                     if (number < 1)
                     {
                         Console.WriteLine($"Ошибка - введите целое положительное число");
                         ok = false;
                     }
-                    ok = true;
+                    else ok = true;
                 }
                 catch (FormatException)
                 {
@@ -93,8 +94,8 @@ namespace Задача_12
         {
             ulong movings = 0;
             ulong comparisons = 0;
-            Console.Write("Массив");
-            Print(arr);
+            //Console.Write("Массив");
+            //Print(arr);
             Stopwatch Time = new Stopwatch();
             Time.Start();
             arr = QuickSort(arr, 0, arr.Length - 1, ref movings, ref comparisons);
@@ -104,8 +105,8 @@ namespace Задача_12
             Console.WriteLine();
             Console.WriteLine("Перемещений: " + movings);
             Console.WriteLine("Сравнений: " + comparisons);
-            Console.WriteLine("Отсортированный массив");
-            Print(arr);
+            //Console.WriteLine("Отсортированный массив");
+            //Print(arr);
             Console.WriteLine("----------------------------------------------------");
 
         }
@@ -149,8 +150,8 @@ namespace Задача_12
         {
             ulong movings = 0;
             ulong comparisons = 0;
-            Console.Write("Массив: ");
-            Print(arr);
+            //Console.Write("Массив: ");
+            //Print(arr);
             Stopwatch Time = new Stopwatch();
             Time.Start();
             arr = RadSort(arr, ref movings, ref comparisons);
@@ -160,8 +161,8 @@ namespace Задача_12
             Console.WriteLine();
             Console.WriteLine("Перемещений: " + movings);
             Console.WriteLine("Сравнений: " + comparisons);
-            Console.WriteLine("Отсортированный массив");
-            Print(arr);
+            //Console.WriteLine("Отсортированный массив");
+            //Print(arr);
             Console.WriteLine("----------------------------------------------------");
         }
 

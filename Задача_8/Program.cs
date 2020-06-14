@@ -208,12 +208,12 @@ namespace Задача_8
                 {
                     string tmp1 = Console.ReadLine();
                     number = Convert.ToInt32(tmp1);
-                    if( number > max || number < min)
+                    ok = true;
+                    if ( number > max || number < min)
                     {
                         Console.WriteLine($"Ошибка - введите целое число от {min} по {max}");
                         ok = false;
                     }
-                    ok = true;
                 }
                 catch (FormatException)
                 {
@@ -231,7 +231,7 @@ namespace Задача_8
             Console.WriteLine();
             int method = ImpIntNumber(@"Выберите действие:
 1) Получить матрицу инциденций из файла
-2 Сгенерировать матрицу инциденций", 1, 2);
+2) Сгенерировать матрицу инциденций ", 1, 2);
             #region exmpl
             switch (method)
             {

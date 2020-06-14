@@ -1,0 +1,7 @@
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_9\bin\Debug\Задача_9.exe.config
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_9\bin\Debug\Задача_9.exe
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_9\bin\Debug\Задача_9.pdb
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_9\obj\Debug\Задача_9.csprojAssemblyReference.cache
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_9\obj\Debug\Задача_9.csproj.CoreCompileInputs.cache
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_9\obj\Debug\Задача_9.exe
+C:\Users\Максим\source\repos\ConsoleApp7\Задача_9\obj\Debug\Задача_9.pdb
